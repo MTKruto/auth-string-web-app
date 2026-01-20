@@ -1,0 +1,55 @@
+.fullscreen-notice {
+  opacity: 0.5;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  user-select: none;
+  cursor: default;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+header, main {
+  padding: 12px;
+}
+
+header > section, main > section {
+  width: 100%;
+  margin: 0 auto;
+}
+
+header > section {
+  max-width: 980px;
+}
+
+main > section {
+  max-width: 480px;
+}
+
+header span {
+  opacity: 0.5;
+}
+
+.error {
+  color: #cf2c2c;
+  padding-top: 12px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+  padding: 8px;
+}
+
+button.primary {
+  background-color: #000000;
+  color: #ffffff;
+}

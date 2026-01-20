@@ -1,0 +1,13 @@
+.auth-string {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-family: monospace;
+  font-size: 1rem;
+}
+
+.auth-string-container {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+}
