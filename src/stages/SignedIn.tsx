@@ -1,5 +1,5 @@
 import { createSignal } from "solid-js";
-import { setStage, type Stage, stage } from "../state/stage";
+import { type Stage, stage } from "../state/stage";
 import "./SignedIn.css";
 import { client } from "../actions/initClient";
 
