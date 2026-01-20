@@ -44,7 +44,7 @@ export function ApiCredentialsForm() {
         type="password"
         value={apiHash()}
         onInput={(e) => setApiHash(e.target.value)}
-        placeholder={(stage() as Stage.Password).hint ?? "Password"}
+        placeholder="API hash"
         pattern="^[a-f0-9]+$"
         required
         autocomplete="off"
