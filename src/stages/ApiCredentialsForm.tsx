@@ -1,7 +1,6 @@
 import { createEffect, createSignal } from "solid-js";
 import { initClient } from "../actions/initClient";
 import { isBusy } from "../state/isBusy";
-import { type Stage, stage } from "../state/stage";
 
 const API_ID = "apiId";
 const API_HASH = "apiHash";
