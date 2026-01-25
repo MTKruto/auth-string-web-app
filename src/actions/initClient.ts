@@ -1,10 +1,11 @@
 import { ClientDispatcher, ClientWorker } from "@mtkruto/mtkruto";
+import Worker from "@mtkruto/mtkruto/worker?worker";
 import { setConnectionState } from "../state/connectionState";
 import { isTabOpen } from "../state/isTabOpen";
 import { setStage } from "../state/stage";
 import { runAction } from "../util/runAction";
 
-const clientWorker = new ClientWorker("/mtkruto-worker.js", { type: "module" });
+const clientWorker = new ClientWorker(new Worker());
 
 export let client: ClientDispatcher;
 
@@ -26,8 +27,8 @@ async function initClientInner(apiId: number, apiHash: string) {
   await client.connect();
 
   try {
-    const authString = await client.exportAuthString();
     const me = await client.getMe();
+    const authString = await client.exportAuthString();
     setStage({
       kind: "signed_in",
       authString,

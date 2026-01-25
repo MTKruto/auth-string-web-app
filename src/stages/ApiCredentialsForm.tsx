@@ -16,6 +16,7 @@ export function ApiCredentialsForm() {
 
   return (
     <form
+      autocomplete="off"
       class="form"
       onsubmit={async (e) => {
         e.preventDefault();
