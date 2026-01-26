@@ -57,3 +57,16 @@ button.primary {
   background-color: #000000;
   color: #ffffff;
 }
+
+.note {
+  color: var(--overlay);
+  font-size: 0.75rem;
+  padding: 0 12px;
+  font-weight: inherit;
+  margin: 0;
+  opacity: 0.5;
+}
+
+.note a, .note a:visited {
+  color: inherit;
+}

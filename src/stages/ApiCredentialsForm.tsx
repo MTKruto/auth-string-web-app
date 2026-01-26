@@ -49,12 +49,12 @@ export function ApiCredentialsForm() {
         required
         autocomplete="off"
       />
-      <button type="submit" disabled={isBusy()} class="primary">Next</button>
 
-      <p>
+      <h6 class="note">
         These credentials can be obtained from{" "}
         <a href="https://my.telegram.org/apps" rel="noopener noreferrer" target="_blank">my.telegram.org/apps</a>.
-      </p>
+      </h6>
+      <button type="submit" disabled={isBusy()} class="primary">Next</button>
     </form>
   );
 }
