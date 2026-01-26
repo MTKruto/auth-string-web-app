@@ -18,7 +18,7 @@ async function initClientInner(apiId: number, apiHash: string) {
     return;
   }
 
-  client = await clientWorker.createClient({
+  client = await clientWorker.createClient("main", {
     storage: "indexeddb",
     apiId,
     apiHash,
