@@ -5,17 +5,12 @@ import { PhoneNumberOrBotTokenForm } from "./stages/PhoneNumberOrBotTokenForm";
 import { SignedIn } from "./stages/SignedIn";
 import { connectionState } from "./state/connectionState";
 import { error } from "./state/error";
-import { isTabOpen } from "./state/isTabOpen";
 import { stage } from "./state/stage";
 import "./App.css";
 import "./Form.css";
 import { ApiCredentialsForm } from "./stages/ApiCredentialsForm";
 
 export function App() {
-  if (isTabOpen) {
-    return <div class="fullscreen-notice">Only one tab can be open at a time.</div>;
-  }
-
   return (
     <>
       <header>

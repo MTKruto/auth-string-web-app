@@ -8,8 +8,8 @@ importers:
   .:
     dependencies:
       "@mtkruto/mtkruto":
-        specifier: jsr:^0.80.1
-        version: "@jsr/mtkruto__mtkruto@0.80.1"
+        specifier: jsr:^0.90.2
+        version: "@jsr/mtkruto__mtkruto@0.90.2"
       solid-js:
         specifier: ^1.9.10
         version: 1.9.10
@@ -381,10 +381,10 @@ packages:
       integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==,
     }
 
-  "@jsr/mtkruto__mtkruto@0.80.1":
+  "@jsr/mtkruto__mtkruto@0.90.2":
     resolution: {
-      integrity: sha512-L42LIOMW2u7J5kCoKXP5frmcZXWKcCVhwEQbQmU0Uo/OO1022EI+vnsT1CT0u0QrXgBSgfDFC7tseRnE/+B6Lg==,
-      tarball: https://npm.jsr.io/~/11/@jsr/mtkruto__mtkruto/0.80.1.tgz,
+      integrity: sha512-XjlbEUbwsjZwpaenq4HDOs9bXiw8GXHhFN0gXok3SCmCUA78comgUQu/WTz7ujuDlr2lZ1+yv4WwKaaEpUXEww==,
+      tarball: https://npm.jsr.io/~/11/@jsr/mtkruto__mtkruto/0.90.2.tgz,
     }
 
   "@jsr/roj__tgcrypto@1.0.1":
@@ -1198,7 +1198,7 @@ snapshots:
       "@jridgewell/resolve-uri": 3.1.2
       "@jridgewell/sourcemap-codec": 1.5.5
 
-  "@jsr/mtkruto__mtkruto@0.80.1":
+  "@jsr/mtkruto__mtkruto@0.90.2":
     dependencies:
       "@jsr/roj__tgcrypto": 1.0.1
       "@jsr/std__assert": 1.0.16

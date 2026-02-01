@@ -1,11 +1,13 @@
-import { ClientDispatcher, ClientWorker } from "@mtkruto/mtkruto";
-import Worker from "@mtkruto/mtkruto/worker?worker";
+import { ClientDispatcher, ClientWorker, errors } from "@mtkruto/mtkruto";
+import SharedWorker from "@mtkruto/mtkruto/worker?sharedworker";
 import { setConnectionState } from "../state/connectionState";
-import { isTabOpen } from "../state/isTabOpen";
 import { setStage } from "../state/stage";
 import { runAction } from "../util/runAction";
 
-const clientWorker = new ClientWorker(new Worker());
+const port = new SharedWorker().port;
+port.start();
+
+const clientWorker = new ClientWorker(port);
 
 export let client: ClientDispatcher;
 
@@ -14,15 +16,19 @@ export async function initClient(apiId: number, apiHash: string) {
 }
 
 async function initClientInner(apiId: number, apiHash: string) {
-  if (isTabOpen) {
-    return;
+  try {
+    client = await clientWorker.createClient("main", {
+      storage: "indexeddb",
+      apiId,
+      apiHash,
+    });
+  } catch (err) {
+    if (err instanceof errors.InputError) {
+      client = clientWorker.getClient("main");
+    } else {
+      throw err;
+    }
   }
-
-  client = await clientWorker.createClient("main", {
-    storage: "indexeddb",
-    apiId,
-    apiHash,
-  });
 
   await client.connect();
 
